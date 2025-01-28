@@ -16,6 +16,9 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: 'Spotify Imersão',
   description: 'Spotify Clone - Imersão Frontend Alura',
+  icons: {
+    icon: '/assets/icons/favicon.png',
+  },
 };
 
 export default function RootLayout({

@@ -14,17 +14,19 @@
 
 ## Diferenças em relação as aulas
 
-### Diferenças aula 1
-
-- Começando diretamente com Next.js ao invés de HTML e CSS puro
+- Começando diretamente com Next.js (framework React.js) ao invés de HTML e CSS puro
 - Usando Tailwind CSS ao invés de CSS puro
-- Separando pedaços de códigos em componentes
+- Separando pedaços de códigos em componentes desde o dia 1
 
 ## Desafios
 
 ### Desafio aula 1
 
 - Construa a aba “Sua biblioteca”
+
+### Desafio aula 2
+
+- Fazer o footer (rodapé)
 
 ## Rodar
 
