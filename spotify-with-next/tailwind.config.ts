@@ -11,8 +11,11 @@ export default {
       colors: {
         primary_bg: '#000000',
         secondary_bg: '#121212',
+        tertiary_bg: '#1f1f1f',
         primary_text: '#ffffff',
         secondary_text: '#b3b3b3',
+        primary_border: '#878787',
+        secondary_border: '#ffffff',
       },
     },
   },
