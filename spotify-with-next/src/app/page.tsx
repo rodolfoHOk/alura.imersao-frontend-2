@@ -5,7 +5,7 @@ export default function Home() {
     <div className="w-full h-full flex flex-col gap-2">
       <ContentHeader />
 
-      <div className="w-full h-full px-6 py-10 flex flex-col bg-secondary_bg rounded-lg">
+      <div className="w-full h-full px-6 py-12 flex flex-col bg-secondary_bg rounded-lg">
         <div className="flex flex-col gap-8">
           <h1 className="font-bold text-4xl">Boa tarde</h1>
 
