@@ -18,7 +18,12 @@ export default {
         inverse_text: '#000000',
         primary_border: '#878787',
         secondary_border: '#ffffff',
+        arrow_bg: '#000000',
+        arrow_hover_bg: '#333333',
       },
+    },
+    fontFamily: {
+      sans: ['var(--font-dm-sans)'],
     },
   },
   plugins: [],

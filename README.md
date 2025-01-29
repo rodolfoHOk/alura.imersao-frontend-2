@@ -17,6 +17,7 @@
 - Começando diretamente com Next.js (framework React.js) ao invés de HTML e CSS puro
 - Usando Tailwind CSS ao invés de CSS puro
 - Separando pedaços de códigos em componentes desde o dia 1
+- Seguindo o novo estilo de página do Spotify com cabeçalho ao invés do apresentado nas aulas
 
 ## Desafios
 
