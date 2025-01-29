@@ -29,6 +29,10 @@
 
 - Fazer o footer (rodapé)
 
+### Desafio aula 3
+
+- Faça os cards de “Boa tarde” e “Navegar por todas as seções”
+
 ## Rodar
 
 ### Requisitos
