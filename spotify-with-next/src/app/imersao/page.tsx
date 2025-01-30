@@ -1,7 +1,18 @@
 import { ContentHeader } from '@/components/ContentHeader';
 import { OfferList } from '@/components/OfferList';
+import { SearchArtistResult } from '@/components/SearchArtistResult';
+import { ArtistsResponse } from '@/models/artist';
 
-export default function Home() {
+async function getArtists(): Promise<ArtistsResponse> {
+  const artists = await fetch('http://localhost:3000/api/artists', {
+    cache: 'no-cache',
+  });
+  return artists.json();
+}
+
+export default async function Home() {
+  const artistsResponse = await getArtists();
+
   return (
     <div className="w-full h-full flex flex-col gap-2">
       <ContentHeader />
@@ -14,6 +25,8 @@ export default function Home() {
         </div>
 
         <OfferList />
+
+        <SearchArtistResult artists={artistsResponse.artists} />
       </div>
     </div>
   );
