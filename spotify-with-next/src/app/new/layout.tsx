@@ -11,7 +11,7 @@ export default function NewLayout({
     <div className="w-screen h-screen flex flex-col">
       <Header />
 
-      <div className="w-full h-full flex flex-row">
+      <div className="w-full h-[calc(100%-128px)] flex flex-row">
         <aside className="w-1/4 h-full min-w-64 p-2 flex flex-col">
           <YourLibrary />
         </aside>

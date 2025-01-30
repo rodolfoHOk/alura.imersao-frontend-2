@@ -47,7 +47,7 @@ export function Header() {
           />
           <div className="w-[1px] h-6 bg-secondary_text/50" />
           <Link
-            href="/search"
+            href="/new/search"
             className="cursor-pointer hover:text-primary_text hover:scale-105 transition-all"
           >
             <FontAwesomeIcon icon={faShip} className="w-5 h-5" />

@@ -9,7 +9,7 @@ export default function ImmersionLayout({
 }>) {
   return (
     <div className="w-screen h-screen flex flex-col">
-      <div className="w-full h-full flex flex-row">
+      <div className="w-full h-[calc(100%-72px)] flex flex-row">
         <aside className="w-1/4 h-full min-w-64 p-2 flex flex-col gap-2">
           <NavBar />
 
