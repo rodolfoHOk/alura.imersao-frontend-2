@@ -1,11 +1,23 @@
-import { OfferList } from '@/components/OfferList';
+import { ArtistResult } from '@/components/ArtistResult';
+import { ArtistsResponse } from '@/models/artist';
 
-export default function SearchPage() {
+async function fetchPopularArtists(): Promise<ArtistsResponse> {
+  const apiResponse = await fetch(`http://localhost:3000/api/artists/popular`, {
+    next: {
+      revalidate: 60 * 60 * 8,
+    },
+  });
+  return await apiResponse.json();
+}
+
+export default async function NewHomePage() {
+  const popularArtistsResponse = await fetchPopularArtists();
+
   return (
-    <div className="w-full h-full px-6 py-[60px] flex flex-col bg-secondary_bg rounded-lg overflow-y-scroll">
-      <h2 className="font-bold text-2xl">Navegar por todas as seções</h2>
+    <div className="w-full h-full px-6 py-4 flex flex-col gap-4 bg-secondary_bg rounded-lg overflow-y-scroll">
+      <h2 className="font-bold text-2xl hover:underline">Artistas Populares</h2>
 
-      <OfferList />
+      <ArtistResult artists={popularArtistsResponse.artists} />
     </div>
   );
 }

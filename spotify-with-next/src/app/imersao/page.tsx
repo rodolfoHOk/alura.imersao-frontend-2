@@ -1,7 +1,7 @@
 'use client';
 import { ContentHeader } from '@/components/ContentHeader';
 import { OfferList } from '@/components/OfferList';
-import { SearchArtistResult } from '@/components/SearchArtistResult';
+import { ArtistResult } from '@/components/ArtistResult';
 import { Artist, ArtistsResponse } from '@/models/artist';
 import { useState } from 'react';
 
@@ -27,7 +27,7 @@ export default function Home() {
 
       {searchResult?.length > 0 ? (
         <div className="w-full h-[calc(100%-72px)] px-6 py-12 flex flex-col bg-secondary_bg rounded-lg overflow-y-scroll">
-          <SearchArtistResult artists={searchResult} />
+          <ArtistResult artists={searchResult} />
         </div>
       ) : (
         <div className="w-full h-[calc(100%-72px)] px-6 py-12 flex flex-col bg-secondary_bg rounded-lg overflow-y-scroll">
