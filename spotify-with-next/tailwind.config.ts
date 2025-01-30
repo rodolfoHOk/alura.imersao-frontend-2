@@ -43,6 +43,13 @@ export default {
     fontFamily: {
       sans: ['var(--font-dm-sans)'],
     },
+    screens: {
+      sm: '640px',
+      md: '800px',
+      lg: '960px',
+      xl: '1160px',
+      '2xl': '1400px',
+    },
   },
   plugins: [],
 } satisfies Config;

@@ -34,6 +34,12 @@
 
 - Faça os cards de “Boa tarde” e “Navegar por todas as seções”
 
+### Desafios aula 4
+
+- Teste fazer mais cards se baseie na página do Spotify e aprenda muito mais
+
+- Crie um arquivo API JSON diferente e explore mais
+
 ## Rodar
 
 ### Requisitos

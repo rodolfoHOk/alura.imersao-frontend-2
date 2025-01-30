@@ -11,14 +11,14 @@ export function OfferCard({ title, imageUrl, className }: OfferCardProps) {
   return (
     <Link href="#">
       <div
-        className={`h-[200px] relative overflow-hidden rounded-lg ${className}`}
+        className={`h-[162px] relative overflow-hidden rounded-lg ${className}`}
       >
         <Image
           src={imageUrl}
           alt=""
           width={120}
           height={120}
-          className="absolute right-0 bottom-0 w-[107px] h-auto rotate-[25deg] translate-x-[18%] translate-y-[2%]"
+          className="absolute right-0 bottom-0 w-[120px] h-auto rotate-[25deg] translate-x-[18%] translate-y-[2%] rounded"
         />
         <span className="p-4 absolute text-primary_text text-2xl font-bold">
           {title}
