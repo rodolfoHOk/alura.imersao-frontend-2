@@ -1,33 +1,45 @@
+'use client';
 import { ContentHeader } from '@/components/ContentHeader';
 import { OfferList } from '@/components/OfferList';
 import { SearchArtistResult } from '@/components/SearchArtistResult';
-import { ArtistsResponse } from '@/models/artist';
+import { Artist, ArtistsResponse } from '@/models/artist';
+import { useState } from 'react';
 
-async function getArtists(): Promise<ArtistsResponse> {
-  const artists = await fetch('http://localhost:3000/api/artists', {
-    cache: 'no-cache',
-  });
-  return artists.json();
-}
+export default function Home() {
+  const [searchResult, setSearchResult] = useState<Artist[]>([]);
 
-export default async function Home() {
-  const artistsResponse = await getArtists();
+  async function onSearchInputChange(text: string) {
+    const apiResponse = await fetch(
+      `http://localhost:3000/api/artists?search=${text}`,
+      {
+        next: {
+          revalidate: 60 * 60 * 8,
+        },
+      }
+    );
+    const artistsResponse = (await apiResponse.json()) as ArtistsResponse;
+    setSearchResult(artistsResponse.artists);
+  }
 
   return (
     <div className="w-full h-full flex flex-col gap-2">
-      <ContentHeader />
+      <ContentHeader onSearchInputChange={onSearchInputChange} />
 
-      <div className="w-full h-[calc(100%-72px)] px-6 py-12 flex flex-col bg-secondary_bg rounded-lg overflow-y-scroll">
-        <div className="flex flex-col gap-8">
-          <h1 className="font-bold text-4xl">Boa tarde</h1>
-
-          <h2 className="font-bold text-2xl">Navegar por todas as seções</h2>
+      {searchResult?.length > 0 ? (
+        <div className="w-full h-[calc(100%-72px)] px-6 py-12 flex flex-col bg-secondary_bg rounded-lg overflow-y-scroll">
+          <SearchArtistResult artists={searchResult} />
         </div>
+      ) : (
+        <div className="w-full h-[calc(100%-72px)] px-6 py-12 flex flex-col bg-secondary_bg rounded-lg overflow-y-scroll">
+          <div className="flex flex-col gap-8">
+            <h1 className="font-bold text-4xl">Boa tarde</h1>
 
-        <OfferList />
+            <h2 className="font-bold text-2xl">Navegar por todas as seções</h2>
+          </div>
 
-        <SearchArtistResult artists={artistsResponse.artists} />
-      </div>
+          <OfferList />
+        </div>
+      )}
     </div>
   );
 }

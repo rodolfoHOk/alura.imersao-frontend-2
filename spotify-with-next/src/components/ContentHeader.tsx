@@ -1,6 +1,23 @@
+'use client';
 import Image from 'next/image';
+import debounce from 'lodash.debounce';
+import { ChangeEvent, useCallback, useMemo } from 'react';
 
-export function ContentHeader() {
+interface ContentHeaderProps {
+  onSearchInputChange: (text: string) => void;
+}
+
+export function ContentHeader({ onSearchInputChange }: ContentHeaderProps) {
+  const debounceFn = useMemo(
+    () => debounce((text: string) => onSearchInputChange(text), 750),
+    [onSearchInputChange]
+  );
+
+  const handleChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => debounceFn(event.target.value),
+    [debounceFn]
+  );
+
   return (
     <div className="p-3 flex flex-row justify-between items-center bg-secondary_bg rounded-lg gap-4">
       <div className="flex flex-row items-center gap-6 px-2">
@@ -30,6 +47,7 @@ export function ContentHeader() {
           type="search"
           placeholder="O que você quer ouvir?"
           maxLength={800}
+          onChange={handleChange}
         />
       </div>
 
