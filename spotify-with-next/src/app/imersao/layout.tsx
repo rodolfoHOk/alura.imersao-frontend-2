@@ -8,8 +8,8 @@ export default function ImmersionLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="w-screen lg:h-screen flex flex-col">
-      <div className="w-full h-[calc(100%-72px)] flex flex-col sm:flex-row">
+    <div className="w-screen sm:h-screen flex flex-col">
+      <div className="w-full sm:flex-1 flex flex-col sm:flex-row">
         <aside className="w-full sm:w-1/4 h-full min-w-64 p-2 flex flex-col gap-2">
           <NavBar />
 
