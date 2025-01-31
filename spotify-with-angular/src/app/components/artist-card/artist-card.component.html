@@ -1,0 +1,26 @@
+<div
+  class="p-4 w-full relative flex-1 bg-card_bg rounded-lg hover:bg-card_hover_bg transition-colors duration-75 group"
+>
+  <div class="w-full relative">
+    <img
+      class="rounded-full"
+      src="{{ artist.urlImg }}"
+      alt=""
+      class="w-[300px] h-auto"
+    />
+    <div class="relative">
+      <div
+        class="absolute -top-12 right-2 w-12 h-12 flex items-center justify-center bg-play_bg text-sm rounded-full opacity-0 group-hover:opacity-100 group-hover:-translate-y-3 gr transition-all duration-300"
+      >
+        <fa-icon [icon]="faPlay"></fa-icon>
+      </div>
+    </div>
+  </div>
+
+  <a href="#">
+    <div class="pt-4 flex flex-col gap-1">
+      <span class="font-bold text-primary_text">{{ artist.name }}</span>
+      <span class="text-secondary_text">{{ artist.genre }}</span>
+    </div>
+  </a>
+</div>
