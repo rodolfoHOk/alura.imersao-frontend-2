@@ -1,0 +1,47 @@
+<div
+  class="pt-2 px-2 flex flex-col items-center gap-3 lg:flex-row lg:items-center lg:gap-0"
+>
+  <div class="min-w-32 lg:pl-5">
+    <a href="/">
+      <img
+        src="/assets/icons/logo-spotify.png"
+        alt="logo do Spotify"
+        class="w-[102px] h-[30px]"
+      />
+    </a>
+  </div>
+
+  <div
+    class="mx-2 w-full flex flex-row gap-2 justify-center lg:justify-start xl:justify-center"
+  >
+    <a
+      href="/"
+      class="min-w-12 w-12 h-12 flex justify-center items-center bg-tertiary_bg rounded-full text-secondary_text hover:scale-105 transition-transform"
+    >
+      <fa-icon [icon]="faHome"></fa-icon>
+    </a>
+
+    <app-search-input></app-search-input>
+  </div>
+
+  <div class="min-w-[390px] flex flex-row items-center gap-4 lg:ml-auto">
+    <button
+      class="mr-4 flex flex-row items-center text-secondary_text text-sm font-bold text-nowrap hover:text-primary_text hover:scale-105 transition-all"
+    >
+      <fa-icon [icon]="faDownload"></fa-icon>
+      <span class="ml-1">Instalar aplicativo</span>
+    </button>
+
+    <button
+      class="flex flex-row items-center text-secondary_text text-sm font-bold text-nowrap hover:text-primary_text hover:scale-105 transition-all"
+    >
+      Inscrever-se
+    </button>
+
+    <button
+      class="h-12 bg-white text-inverse_text font-bold px-8 rounded-full hover:bg-inverse_bg hover:scale-105 transition-all"
+    >
+      Entrar
+    </button>
+  </div>
+</div>
