@@ -19,7 +19,7 @@ export function ContentHeader({ onSearchInputChange }: ContentHeaderProps) {
   );
 
   return (
-    <div className="p-3 flex flex-row justify-between items-center bg-secondary_bg rounded-lg gap-4">
+    <div className="p-3 flex flex-col xl:flex-row justify-between items-center bg-secondary_bg rounded-lg gap-4">
       <div className="flex flex-row items-center gap-6 px-2">
         <button className="w-8 h-8 bg-arrow_bg flex flex-row justify-center items-center rounded-full hover:bg-arrow_hover_bg transition-colors">
           <Image

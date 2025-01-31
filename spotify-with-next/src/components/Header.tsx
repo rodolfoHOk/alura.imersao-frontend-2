@@ -6,8 +6,8 @@ import { SearchInput } from './SearchInput';
 
 export function Header() {
   return (
-    <div className="flex flex-row items-center pt-2 px-2">
-      <div className="min-w-32 pl-5">
+    <div className="pt-2 px-2 flex flex-col items-center gap-3 lg:flex-row lg:items-center lg:gap-0">
+      <div className="min-w-32 lg:pl-5">
         <Link href="/">
           <Image
             src="/assets/icons/logo-spotify.png"
@@ -19,7 +19,7 @@ export function Header() {
         </Link>
       </div>
 
-      <div className="mx-2 w-full flex flex-row gap-2 justify-start xl:justify-center">
+      <div className="mx-2 w-full flex flex-row gap-2 justify-center lg:justify-start xl:justify-center">
         <Link
           href="/new"
           className="min-w-12 w-12 h-12 flex justify-center items-center bg-tertiary_bg rounded-full text-secondary_text hover:scale-105 transition-transform"
@@ -30,7 +30,7 @@ export function Header() {
         <SearchInput />
       </div>
 
-      <div className="min-w-[390px] flex flex-row items-center gap-4 ml-auto">
+      <div className="min-w-[390px] flex flex-row items-center gap-4 lg:ml-auto">
         <button className="mr-4 flex flex-row items-center text-secondary_text text-sm font-bold text-nowrap hover:text-primary_text hover:scale-105 transition-all">
           <FontAwesomeIcon icon={faDownload} />
           <span className="ml-1">Instalar aplicativo</span>

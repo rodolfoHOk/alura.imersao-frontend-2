@@ -12,7 +12,7 @@ export function Footer() {
       </div>
 
       <div className="mr-2">
-        <button className="h-12 bg-white text-inverse_text font-bold px-6 rounded-full hover:bg-inverse_bg hover:scale-105 transition-all">
+        <button className="min-w-36 h-12 bg-white text-inverse_text font-bold px-6 rounded-full hover:bg-inverse_bg hover:scale-105 transition-all">
           Inscreva-se grátis
         </button>
       </div>

@@ -19,7 +19,7 @@ export default async function SearchPage({
 }: {
   params: { search: string };
 }) {
-  const { search } = params;
+  const { search } = await params;
   if (!search) {
     redirect('/new/search');
   }
