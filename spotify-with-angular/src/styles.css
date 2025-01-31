@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+app-home,
+app-search,
+app-search-result {
+  @apply w-full h-full flex flex-col;
+}

@@ -1,1 +1,17 @@
-<p>search works!</p>
+<div
+  class="w-full h-full px-6 py-[60px] flex flex-col gap-4 bg-secondary_bg rounded-lg overflow-y-scroll"
+>
+  <h2 class="font-bold text-2xl">Navegar por todas as seções</h2>
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 justify-center"
+  >
+    <div *ngFor="let offer of offers" class="w-full">
+      <app-offer-card
+        [title]="offer.title"
+        [imageUrl]="offer.imageUrl"
+        [color]="offer.color"
+      ></app-offer-card>
+    </div>
+  </div>
+</div>

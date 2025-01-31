@@ -1,11 +1,15 @@
 <div
-  class="w-screen min-h-screen h-fit sm:h-screen flex flex-col bg-primary_bg font-sans text-primary_text"
+  class="w-screen min-h-screen flex flex-col bg-primary_bg font-sans text-primary_text"
 >
   <app-header></app-header>
 
-  <div class="w-full sm:flex-1 flex flex-col sm:flex-row">
-    <app-sidebar></app-sidebar>
-    <router-outlet />
+  <div class="flex-1 flex flex-col sm:flex-row p-2 gap-2">
+    <aside class="min-w-64 w-full sm:w-1/4 flex flex-col">
+      <app-sidebar class="h-full flex"></app-sidebar>
+    </aside>
+    <div class="w-full flex flex-col sm:overflow-scroll">
+      <router-outlet />
+    </div>
   </div>
 
   <app-footer></app-footer>
