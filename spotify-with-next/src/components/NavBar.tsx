@@ -11,8 +11,8 @@ export function NavBar() {
           <Image
             src="/assets/icons/logo-spotify.png"
             alt="logo do Spotify"
-            width={80}
-            height={40}
+            width={102}
+            height={30}
             priority
           />
         </Link>
@@ -21,7 +21,7 @@ export function NavBar() {
       <ul className="mt-5 px-5 pb-2.5">
         <li className="py-2.5">
           <Link
-            href="/"
+            href="/imersao"
             className="text-secondary_text font-semibold text-sm hover:text-primary_text transition-colors"
           >
             <FontAwesomeIcon icon={faHome} />

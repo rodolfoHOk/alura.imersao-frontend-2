@@ -20,7 +20,7 @@ export default {
         secondary_border: '#ffffff',
         arrow_bg: '#000000',
         arrow_hover_bg: '#333333',
-        card_bg: '#181818',
+        card_bg: '#121212',
         card_hover_bg: '#252525',
         play_bg: '#1db954',
         card_1: 'rgb(0, 100, 80)',

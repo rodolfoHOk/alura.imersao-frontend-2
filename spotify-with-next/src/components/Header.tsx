@@ -12,8 +12,8 @@ export function Header() {
           <Image
             src="/assets/icons/logo-spotify.png"
             alt="logo do Spotify"
-            width={110}
-            height={40}
+            width={102}
+            height={30}
             priority
           />
         </Link>

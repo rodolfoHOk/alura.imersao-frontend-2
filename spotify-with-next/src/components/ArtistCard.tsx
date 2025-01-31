@@ -18,6 +18,7 @@ export function ArtistCard({ artist }: ArtistCardProps) {
           alt=""
           width={300}
           height={300}
+          priority
         />
         <div className="relative">
           <div className="absolute -top-12 right-2 w-12 h-12 flex items-center justify-center bg-play_bg text-sm rounded-full opacity-0 group-hover:opacity-100 group-hover:-translate-y-3 gr transition-all duration-300">
