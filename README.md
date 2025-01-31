@@ -41,6 +41,10 @@
 
 - Crie um arquivo API JSON diferente e explore mais
 
+### Desafio aula 5
+
+- Fazer o resto do React
+
 ## Rodar
 
 ### Requisitos
