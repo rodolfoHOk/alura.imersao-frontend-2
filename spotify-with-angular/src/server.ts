@@ -7,6 +7,7 @@ import {
 import express from 'express';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import artistsJson from './artists.json';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
@@ -19,11 +20,19 @@ const angularApp = new AngularNodeAppEngine();
  * Uncomment and define endpoints as necessary.
  */
 
-app.get('/api/hello', (req, res) => {
-  res.json({
-    status: 200,
-    message: 'Hello from API',
-  });
+app.get('/api/artists', (req, res) => {
+  const search = req.query['search'];
+  if (search) {
+    const filteredArtists = artistsJson.artists.filter((artist) =>
+      artist.name.toLowerCase().includes(search.toString().toLowerCase())
+    );
+    res.json({ artists: filteredArtists });
+  }
+  res.json({ artists: [] });
+});
+
+app.get('/api/artists/popular', (req, res) => {
+  res.json(artistsJson);
 });
 
 /**
